@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 1515fd420524c44589da9aaa8932ddd8
-timeCreated: 1467832583
+guid: 64f30a788034440c697215f00003f3f7
+timeCreated: 1468961353
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,9 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Plane.008
-    4300002: Plane.007
-    4300004: Roof
+    4300000: Wood inner window
   materials:
     importMaterials: 0
     materialName: 0

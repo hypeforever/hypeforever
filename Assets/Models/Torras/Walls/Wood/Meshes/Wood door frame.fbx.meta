@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 1515fd420524c44589da9aaa8932ddd8
-timeCreated: 1467832583
+guid: 3fc06b92e700b448fa5c00ed5bd0992a
+timeCreated: 1468839688
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,9 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Plane.008
-    4300002: Plane.007
-    4300004: Roof
+    4300000: Wood wall.004
   materials:
     importMaterials: 0
     materialName: 0

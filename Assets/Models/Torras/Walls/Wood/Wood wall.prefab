@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 477514}
   - 33: {fileID: 3392264}
   - 23: {fileID: 2301944}
+  - 65: {fileID: 6583840}
   m_Layer: 0
   m_Name: Wood wall
   m_TagString: Untagged
@@ -63,7 +64,19 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130802}
-  m_Mesh: {fileID: 4300000, guid: dd10228e35c4340f9b6ef3315d2de7e5, type: 3}
+  m_Mesh: {fileID: 4300002, guid: dd10228e35c4340f9b6ef3315d2de7e5, type: 3}
+--- !u!65 &6583840
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130802}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 3, z: 0.05000007}
+  m_Center: {x: -1.25, y: 1.5, z: 0.024999958}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
