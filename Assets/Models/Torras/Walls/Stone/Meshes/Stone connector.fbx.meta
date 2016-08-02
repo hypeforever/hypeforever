@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 382b559a98a964721a276428cb21af20
-timeCreated: 1467738784
+guid: 46b6a30a95dea4a25adf7d3baec04db3
+timeCreated: 1470155310
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Plane.007
-    4300002: Stone corner
+    4300000: Stone connector
   materials:
     importMaterials: 0
     materialName: 0
@@ -54,7 +53,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     human: []
