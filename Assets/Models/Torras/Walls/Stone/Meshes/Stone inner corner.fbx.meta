@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: e77e245866fb84ac9ae64a008fcc0e97
-timeCreated: 1467573413
+guid: 5689ffe493b29404bbf60e0966fba1f6
+timeCreated: 1470220912
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,10 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Plane.001
-    4300002: Plane.002
-    4300004: Stone wall
-    4300006: Stone connector
+    4300000: Stone inner corner
   materials:
     importMaterials: 0
     materialName: 0
