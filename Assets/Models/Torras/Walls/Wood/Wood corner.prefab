@@ -1,15 +1,15 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &114430
+--- !u!1 &129434
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 425200}
-  - 33: {fileID: 3338900}
-  - 23: {fileID: 2322266}
+  - 4: {fileID: 429110}
+  - 33: {fileID: 3341146}
+  - 23: {fileID: 2321502}
   m_Layer: 0
   m_Name: Wood corner
   m_TagString: Untagged
@@ -17,25 +17,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &425200
+--- !u!4 &429110
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114430}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000008940697}
-  m_LocalPosition: {x: 1, y: 0, z: -10}
+  m_GameObject: {fileID: 129434}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &2322266
+--- !u!23 &2321502
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114430}
+  m_GameObject: {fileID: 129434}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,13 +56,13 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3338900
+--- !u!33 &3341146
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114430}
-  m_Mesh: {fileID: 4300000, guid: fc52876d8eb41413586db4fdbc79c7d3, type: 3}
+  m_GameObject: {fileID: 129434}
+  m_Mesh: {fileID: 4300002, guid: 3e58caf9383ab4213a02828dd6883515, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -72,5 +72,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 114430}
+  m_RootGameObject: {fileID: 129434}
   m_IsPrefabParent: 1
