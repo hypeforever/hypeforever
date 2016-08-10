@@ -131,6 +131,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             UpdateCameraPosition(speed);
 
             m_MouseLook.UpdateCursorLock();
+            
+
         }
 
 
@@ -236,6 +238,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void RotateView()
         {
+            if(Time.timeScale != 0.0f) //this if statement stops the mouselook when timescale is set to 0.0f, as it is used to pause the game.
             m_MouseLook.LookRotation (transform, m_Camera.transform);
         }
 

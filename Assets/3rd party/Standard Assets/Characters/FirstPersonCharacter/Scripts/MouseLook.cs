@@ -74,16 +74,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void InternalLockUpdate()
         {
-            if(Input.GetKeyUp(KeyCode.Escape))
+
+            if (Input.GetKeyUp(KeyCode.Escape) || Time.timeScale == 0.0f || Input.GetKeyDown(KeyCode.Pause)) //Time.timeScale == 0.0f || Input.GetKeyDown(KeyCode.Pause) arguments are added to provide a cursor when the game is paused.
             {
                 m_cursorIsLocked = false;
             }
-            else if(Input.GetMouseButtonUp(0))
+            else if(Input.GetMouseButtonUp(0) || Time.timeScale != 0.0f) //In order to make the cursor instantly invisible again after the pause is lifted, we must add Time.timeScale != 0.0f here
             {
                 m_cursorIsLocked = true;
             }
 
-            if (m_cursorIsLocked)
+            if (m_cursorIsLocked || Time.timeScale != 0.0f && m_cursorIsLocked)
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
