@@ -1,48 +1,54 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SceneController : MonoBehaviour {
-    
-    
+//
+// Summary:
+//     ///
+//     A ControllerScript that controls the sceneflow and UserInterface, MUST ALWAYS be present in the scene on a Seperate GameObject named: "SceneControllerObject".
+//     ///
+
+public class SceneController : MonoBehaviour  {
+
+  
     //Private variables that are serialized can be seen from the inspector, below are a list of canvas variables that can take a canvas and use it in the private interface, 
     //for the SceneController. This makes it possible to have more than one submenu in the same scene, and can also be used for ingame inventory, savegame, merchants and more.
     [SerializeField]
-    [Tooltip("Insert Canvas, method value = 0, the canvas must be uncommented in canvasSwapper() - line 66+")]
+    [Tooltip("Insert Canvas, method value = 0, the canvas must be uncommented in canvasSwapper() - line 77+")]
     private Canvas mainMenuCanvas;
     [SerializeField]
-    [Tooltip("Insert Canvas, method value = 1, the canvas must be uncommented in canvasSwapper() - line 66+")]
+    [Tooltip("Insert Canvas, method value = 1, the canvas must be uncommented in canvasSwapper() - line 77+")]
     private Canvas creditsCanvas;
     [SerializeField]
-    [Tooltip("Insert Canvas, method value = 2, the canvas must be uncommented in canvasSwapper() - line 66+")]
+    [Tooltip("Insert Canvas, method value = 2, the canvas must be uncommented in canvasSwapper() - line 77+")]
     private Canvas inGamePauseCanvas;
     [SerializeField]
-    [Tooltip("Insert Canvas, method value = 3, the canvas must be uncommented in canvasSwapper() - line 66+")]
-    private Canvas InGameStandardCanvas;
+    [Tooltip("Insert Canvas, method value = 3, the canvas must be uncommented in canvasSwapper() - line 77+")]
+    private Canvas inGameStandardCanvas;
     [SerializeField]
-    [Tooltip("Insert Canvas, method value = 4, the canvas must be uncommented in canvasSwapper() - line 66+")]
+    [Tooltip("Insert Canvas, method value = 4, the canvas must be uncommented in canvasSwapper() - line 77+")]
     private Canvas placeholder_4;
     [SerializeField]
-    [Tooltip("Insert Canvas, method value = 5, the canvas must be uncommented in canvasSwapper() - line 66+")]
+    [Tooltip("Insert Canvas, method value = 5, the canvas must be uncommented in canvasSwapper() - line 77+")]
     private Canvas placeholder_5;
     [SerializeField]
-    [Tooltip("Insert Canvas, method value = 6, the canvas must be uncommented in canvasSwapper() - line 66+")]
+    [Tooltip("Insert Canvas, method value = 6, the canvas must be uncommented in canvasSwapper() - line 77+")]
     private Canvas placeholder_6;
     [SerializeField]
-    [Tooltip("Insert Canvas, method value = 7, the canvas must be uncommented in canvasSwapper() - line 66+")]
+    [Tooltip("Insert Canvas, method value = 7, the canvas must be uncommented in canvasSwapper() - line 77+")]
     private Canvas placeholder_7;
     [SerializeField]
-    [Tooltip("Insert Canvas, method value = 8, the canvas must be uncommented in canvasSwapper() - line 66+")]
+    [Tooltip("Insert Canvas, method value = 8, the canvas must be uncommented in canvasSwapper() - line 77+")]
     private Canvas placeholder_8;
     [SerializeField]
-    [Tooltip("Insert Canvas, method value = 9, the canvas must be uncommented in canvasSwapper() - line 66+")]
+    [Tooltip("Insert Canvas, method value = 9, the canvas must be uncommented in canvasSwapper() - line 77+")]
     private Canvas placeholder_9;
     [SerializeField]
-    [Tooltip("Insert Canvas, method value = 10, the canvas must be uncommented in canvasSwapper() - line 66+")]
+    [Tooltip("Insert Canvas, method value = 10, the canvas must be uncommented in canvasSwapper() - line 77+")]
     private Canvas placeholder_10;
 
 
 
-    public bool ispaused = false;
+    public bool isPaused = false;
 
 
     // Use this for initialization
@@ -64,7 +70,7 @@ public class SceneController : MonoBehaviour {
     public void sceneLoader(string x)
     {
         Time.timeScale = 1.0f; // this line ensures that the timeScale is resumed to normal if the scene is changed
-
+        Cursor.lockState = CursorLockMode.Locked; //Fixes an issue that makes the camera move on load, if it is bound to the cursor, by locking the cursor to the center of the screen before loading. However, this must be compensated for with another script in the MainMenu
         UnityEngine.SceneManagement.SceneManager.LoadScene(x);
     }
     
@@ -84,7 +90,7 @@ public class SceneController : MonoBehaviour {
 
 
                         //inGamePauseCanvas.enabled = false;
-                        //InGameStandardCanvas.enabled = false;
+                        //inGameStandardCanvas.enabled = false;
                         //placeholder_4.enabled = false;
                         //placeholder_5.enabled = false;
                         //placeholder_6.enabled = false;
@@ -102,7 +108,7 @@ public class SceneController : MonoBehaviour {
                         mainMenuCanvas.enabled = true;
 
                         //inGamePauseCanvas.enabled = false;
-                        //InGameStandardCanvas.enabled = false;
+                        //inGameStandardCanvas.enabled = false;
                         //placeholder_4.enabled = false;
                         //placeholder_5.enabled = false;
                         //placeholder_6.enabled = false;
@@ -119,7 +125,7 @@ public class SceneController : MonoBehaviour {
                         //creditsCanvas.enabled = false;
 
                         inGamePauseCanvas.enabled = true;
-                        InGameStandardCanvas.enabled = false;
+                        inGameStandardCanvas.enabled = false;
                         //placeholder_4.enabled = false;
                         //placeholder_5.enabled = false;
                         //placeholder_6.enabled = false;
@@ -135,7 +141,7 @@ public class SceneController : MonoBehaviour {
                         //creditsCanvas.enabled = false;
 
                         inGamePauseCanvas.enabled = false;
-                        InGameStandardCanvas.enabled = true;
+                        inGameStandardCanvas.enabled = true;
                         //placeholder_4.enabled = false;
                         //placeholder_5.enabled = false;
                         //placeholder_6.enabled = false;
@@ -151,7 +157,7 @@ public class SceneController : MonoBehaviour {
                         //creditsCanvas.enabled = false;
 
                         //inGamePauseCanvas.enabled = false;
-                        //InGameStandardCanvas.enabled = false;
+                        //inGameStandardCanvas.enabled = false;
                         //placeholder_4.enabled = true;
                         //placeholder_5.enabled = false;
                         //placeholder_6.enabled = false;
@@ -167,7 +173,7 @@ public class SceneController : MonoBehaviour {
                         //creditsCanvas.enabled = false;
 
                         //inGamePauseCanvas.enabled = false;
-                        //InGameStandardCanvas.enabled = false;
+                        //inGameStandardCanvas.enabled = false;
                         //placeholder_4.enabled = false;
                         //placeholder_5.enabled = true;
                         //placeholder_6.enabled = false;
@@ -183,7 +189,7 @@ public class SceneController : MonoBehaviour {
                         //creditsCanvas.enabled = false;
 
                         //inGamePauseCanvas.enabled = false;
-                        //InGameStandardCanvas.enabled = false;
+                        //inGameStandardCanvas.enabled = false;
                         //placeholder_4.enabled = false;
                         //placeholder_5.enabled = false;
                         //placeholder_6.enabled = true;
@@ -199,7 +205,7 @@ public class SceneController : MonoBehaviour {
                         //creditsCanvas.enabled = false;
 
                         //inGamePauseCanvas.enabled = false;
-                        //InGameStandardCanvas.enabled = false;
+                        //inGameStandardCanvas.enabled = false;
                         //placeholder_4.enabled = false;
                         //placeholder_5.enabled = false;
                         //placeholder_6.enabled = false;
@@ -215,7 +221,7 @@ public class SceneController : MonoBehaviour {
                         //creditsCanvas.enabled = false;
 
                         //inGamePauseCanvas.enabled = false;
-                        //InGameStandardCanvas.enabled = false;
+                        //inGameStandardCanvas.enabled = false;
                         //placeholder_4.enabled = false;
                         //placeholder_5.enabled = false;
                         //placeholder_6.enabled = false;
@@ -231,7 +237,7 @@ public class SceneController : MonoBehaviour {
                         //creditsCanvas.enabled = false;
 
                         //inGamePauseCanvas.enabled = false;
-                        //InGameStandardCanvas.enabled = false;
+                        //inGameStandardCanvas.enabled = false;
                         //placeholder_4.enabled = false;
                         //placeholder_5.enabled = false;
                         //placeholder_6.enabled = false;
@@ -247,7 +253,7 @@ public class SceneController : MonoBehaviour {
                         //creditsCanvas.enabled = false;
 
                         //inGamePauseCanvas.enabled = false;
-                        //InGameStandardCanvas.enabled = false;
+                        //inGameStandardCanvas.enabled = false;
                         //placeholder_4.enabled = false;
                         //placeholder_5.enabled = false;
                         //placeholder_6.enabled = false;
@@ -264,6 +270,9 @@ public class SceneController : MonoBehaviour {
             Debug.Log("The value entered for the'canvasSwapper(int x)' method is not within the switch. Check Controller script line 40+ to add another value! Please note that the canvas must be added to the script, and either public or serialized in the code. Default is set to MainMenu");
 
     }
+
+
+
     public bool scenePauser(bool pauseState)
     {
         
@@ -271,33 +280,35 @@ public class SceneController : MonoBehaviour {
         {
             Time.timeScale = 0.0f;
             
-            ispaused = true;
+            isPaused = true;
         }
         else
         {
             Time.timeScale = 1.0f;
             
-            ispaused = false;
+            isPaused = false;
         }
-        return ispaused;
+        return isPaused;
     }
+
+
 
    IEnumerator inGamePause()
     {
-        if (Input.GetKeyDown(KeyCode.Pause) && !ispaused)
+        if (Input.GetKeyDown(KeyCode.Pause) && !isPaused)
         {
             canvasSwapper(2);
             scenePauser(true);
             yield return new WaitForSeconds(1f);
         }
-        if (Input.GetKeyDown(KeyCode.Escape) && ispaused)
+        if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
         {
             scenePauser(false);
             canvasSwapper(3);
 
             yield return new WaitForSeconds(1f);
         }
-        if (Input.GetKeyDown(KeyCode.Pause) && ispaused)
+        if (Input.GetKeyDown(KeyCode.Pause) && isPaused)
         {
             scenePauser(false);
             canvasSwapper(3);
@@ -307,7 +318,8 @@ public class SceneController : MonoBehaviour {
 
     public bool getPauseState()
     {
-        return ispaused;
+        
+        return isPaused;
             
     }
 

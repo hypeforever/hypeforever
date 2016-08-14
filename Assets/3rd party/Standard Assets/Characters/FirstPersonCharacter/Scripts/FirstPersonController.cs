@@ -8,8 +8,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 {
     [RequireComponent(typeof (CharacterController))]
     [RequireComponent(typeof (AudioSource))]
+    [RequireComponent(typeof (SceneController))]
     public class FirstPersonController : MonoBehaviour
     {
+
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
@@ -28,6 +30,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
+       
         private Camera m_Camera;
         private bool m_Jump;
         private float m_YRotation;
@@ -41,6 +44,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        private SceneController m_SceneController;
+        private GameObject m_SceneControllerObject;
+
+
+        private void Awake() // Awake must be added to instantiate a Scene Controller as it extends monobehaviour it cannot be called outside its dependend object, i.e. a seperate gameobject for the scene controller MUST be in the scene at all times.
+        {
+            m_SceneControllerObject = GameObject.Find("SceneControllerObject"); // Used to call script attached to this in Start();
+           
+        }
+
+
 
         // Use this for initialization
         private void Start()
@@ -55,7 +69,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+
+            m_SceneController = m_SceneControllerObject.GetComponent<SceneController>(); // This has to be called from a seperate object in the scene, this cannot be done in the same execution therfore we use Awake();!
         }
+        
+
+
 
 
         // Update is called once per frame
@@ -81,6 +100,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+            
         }
 
 
@@ -238,7 +258,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void RotateView()
         {
-            if(Time.timeScale != 0.0f) //this if statement stops the mouselook when timescale is set to 0.0f, as it is used to pause the game.
+            if(!m_SceneController.getPauseState()) //this if statement stops the mouselook when the gameobject 'SceneControllerObject', which MUST be pressent in the scene bacause of composition, has its scenePauser make getPauseState return true or false. 
             m_MouseLook.LookRotation (transform, m_Camera.transform);
         }
 
