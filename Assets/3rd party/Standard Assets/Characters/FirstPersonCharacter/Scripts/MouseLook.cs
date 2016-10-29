@@ -5,7 +5,7 @@ using UnityStandardAssets.CrossPlatformInput;
 namespace UnityStandardAssets.Characters.FirstPerson
 {
     [Serializable]
-    public class MouseLook
+    public class MouseLook 
     {
         public float XSensitivity = 2f;
         public float YSensitivity = 2f;
@@ -15,6 +15,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public bool smooth;
         public float smoothTime = 5f;
         public bool lockCursor = true;
+        private SceneController m_SceneController;
+        private GameObject m_SceneControllerObject;
+
+
+        private void Awake() // Awake must be added to instantiate a Scene Controller as it extends monobehaviour it cannot be called outside its dependend object, i.e. a seperate gameobject for the scene controller MUST be in the scene at all times.
+        {
+            m_SceneControllerObject = GameObject.Find("SceneControllerObject"); // Used to call script attached to this in Start();
+            //Debug.Log("woken");
+
+        }
+        private void Start()
+        {
+            m_SceneController = m_SceneControllerObject.GetComponent<SceneController>(); // This has to be called from a seperate object in the scene, this cannot be done in the same execution therfore we use Awake();!
+            //Debug.Log("started");
+        }
 
 
         private Quaternion m_CharacterTargetRot;
@@ -23,6 +38,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public void Init(Transform character, Transform camera)
         {
+            Awake();
+            Start();
             m_CharacterTargetRot = character.localRotation;
             m_CameraTargetRot = camera.localRotation;
         }
@@ -74,16 +91,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void InternalLockUpdate()
         {
-            if(Input.GetKeyUp(KeyCode.Escape))
+
+            if (Input.GetKeyUp(KeyCode.Escape) || /*Time.timeScale == 0.0f*/ m_SceneController.getPauseState() || Input.GetKeyDown(KeyCode.Pause)) //Time.timeScale == 0.0f || Input.GetKeyDown(KeyCode.Pause) arguments are added to provide a cursor when the game is paused.
             {
                 m_cursorIsLocked = false;
             }
-            else if(Input.GetMouseButtonUp(0))
+            else if(Input.GetMouseButtonUp(0) || /*Time.timeScale != 0.0f*/ !m_SceneController.getPauseState()) //In order to make the cursor instantly invisible again after the pause is lifted, we must add Time.timeScale != 0.0f here
             {
                 m_cursorIsLocked = true;
             }
 
-            if (m_cursorIsLocked)
+            if (m_cursorIsLocked || /*Time.timeScale != 0.0f*/ !m_SceneController.getPauseState() && m_cursorIsLocked)
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
