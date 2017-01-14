@@ -27,6 +27,10 @@ LightmapSnapshot.asset.meta
 LightingData.asset
 LightingData.asset.meta
 
+# Occlusion Culling
+OcclusionCullingData.asset
+OcclusionCullingData.asset.meta
+
 # Unity3D generated meta files
 *.pidb.meta
 
