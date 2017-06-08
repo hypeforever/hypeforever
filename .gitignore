@@ -1,3 +1,6 @@
+*.jpeg~
+*.png~
+
 ### Unity ###
 /[Ll]ibrary/
 /[Tt]emp/
