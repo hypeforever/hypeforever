@@ -22953,7 +22953,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013695376452, guid: 9b46e17d0193842779eff4cbdc83be29, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.895
+      value: -9.689
       objectReference: {fileID: 0}
     - target: {fileID: 4000013695376452, guid: 9b46e17d0193842779eff4cbdc83be29, type: 2}
       propertyPath: m_LocalPosition.y
@@ -22990,6 +22990,10 @@ Prefab:
     - target: {fileID: 4000013695376452, guid: 9b46e17d0193842779eff4cbdc83be29, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 65.379005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014058888482, guid: 9b46e17d0193842779eff4cbdc83be29, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b46e17d0193842779eff4cbdc83be29, type: 2}
@@ -29697,6 +29701,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014058888482, guid: 9b46e17d0193842779eff4cbdc83be29, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b46e17d0193842779eff4cbdc83be29, type: 2}
   m_IsPrefabParent: 0
@@ -34299,6 +34307,10 @@ Prefab:
     - target: {fileID: 1000014058888482, guid: 9b46e17d0193842779eff4cbdc83be29, type: 2}
       propertyPath: m_Name
       value: Wood barrel (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014058888482, guid: 9b46e17d0193842779eff4cbdc83be29, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b46e17d0193842779eff4cbdc83be29, type: 2}
@@ -41828,7 +41840,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 83d7b13e7b6d9421692baddf79f41572, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.077
+      value: -10.66
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 83d7b13e7b6d9421692baddf79f41572, type: 3}
       propertyPath: m_LocalPosition.y
@@ -41836,7 +41848,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 83d7b13e7b6d9421692baddf79f41572, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.035
+      value: 14.175
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 83d7b13e7b6d9421692baddf79f41572, type: 3}
       propertyPath: m_LocalRotation.x
@@ -41844,7 +41856,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 83d7b13e7b6d9421692baddf79f41572, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.99673593
+      value: 0.99989843
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 83d7b13e7b6d9421692baddf79f41572, type: 3}
       propertyPath: m_LocalRotation.z
@@ -41852,7 +41864,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 83d7b13e7b6d9421692baddf79f41572, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.08073135
+      value: 0.014255449
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 83d7b13e7b6d9421692baddf79f41572, type: 3}
       propertyPath: m_RootOrder
@@ -41860,7 +41872,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 83d7b13e7b6d9421692baddf79f41572, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 170.73901
+      value: 178.36601
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83d7b13e7b6d9421692baddf79f41572, type: 3}
@@ -42168,7 +42180,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013695376452, guid: 9b46e17d0193842779eff4cbdc83be29, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.648
+      value: -9.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000013695376452, guid: 9b46e17d0193842779eff4cbdc83be29, type: 2}
       propertyPath: m_LocalPosition.y
@@ -42201,6 +42213,10 @@ Prefab:
     - target: {fileID: 1000014058888482, guid: 9b46e17d0193842779eff4cbdc83be29, type: 2}
       propertyPath: m_Name
       value: Wood barrel (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014058888482, guid: 9b46e17d0193842779eff4cbdc83be29, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b46e17d0193842779eff4cbdc83be29, type: 2}

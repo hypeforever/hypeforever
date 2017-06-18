@@ -31,6 +31,8 @@ LightmapSnapshot.asset
 LightmapSnapshot.asset.meta
 LightingData.asset
 LightingData.asset.meta
+Lightmap-*
+Assets/Scenes/Torras.meta
 
 # Occlusion Culling
 OcclusionCullingData.asset
