@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 46b6a30a95dea4a25adf7d3baec04db3
-timeCreated: 1470155310
+guid: f2f0a7335c880453d8766d000a94a6ef
+timeCreated: 1499419137
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Stone connector
+    4300000: Torch
   materials:
     importMaterials: 0
     materialName: 0
@@ -72,7 +72,7 @@ ModelImporter:
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
-    skeletonHasParents: 0
+    skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1

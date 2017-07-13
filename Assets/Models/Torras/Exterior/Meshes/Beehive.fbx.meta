@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 46b6a30a95dea4a25adf7d3baec04db3
-timeCreated: 1470155310
+guid: 0f7f6a7fa4f1e483aa3006a4b28fe09c
+timeCreated: 1499890539
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Stone connector
+    4300000: Beehive
   materials:
     importMaterials: 0
     materialName: 0
@@ -55,7 +55,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -72,7 +72,7 @@ ModelImporter:
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
-    skeletonHasParents: 0
+    skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1
