@@ -18,7 +18,7 @@ public class SnapToGrid : MonoBehaviour {
 		}
 
 		if (snapRotation && snapRotateValue > 0.0f) {
-			transform.eulerAngles = calculateSnapRotation(transform.eulerAngles);
+			transform.localEulerAngles = calculateSnapRotation(transform.localEulerAngles);
 		}
 	}
 
