@@ -1,42 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &104472
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1172647611543218}
+  m_IsPrefabParent: 1
+--- !u!1 &1172647611543218
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 495890}
-  - component: {fileID: 3361462}
-  - component: {fileID: 2313332}
-  - component: {fileID: 114035936393985166}
+  - component: {fileID: 4092807997086824}
+  - component: {fileID: 33860300427193076}
+  - component: {fileID: 23470958751009532}
+  - component: {fileID: 114823148700779692}
+  - component: {fileID: 65454415981758400}
   m_Layer: 0
-  m_Name: roof_wall
+  m_Name: wood_fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &495890
+--- !u!4 &4092807997086824
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 104472}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -12.5}
+  m_GameObject: {fileID: 1172647611543218}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 0.5, y: 0, z: 62.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!23 &2313332
+  m_LocalEulerAnglesHint: {x: 0, y: -98.786, z: 0}
+--- !u!23 &23470958751009532
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 104472}
+  m_GameObject: {fileID: 1172647611543218}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -44,8 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 71d02fe69fb6d46dc92008ef61d79110, type: 2}
-  - {fileID: 2100000, guid: 9bcba9308ff264f6f8defa41d76034c9, type: 2}
+  - {fileID: 2100000, guid: 3f4c9d6acead243bdb77b5ddc8de9be2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -64,30 +75,31 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &3361462
+--- !u!33 &33860300427193076
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 104472}
-  m_Mesh: {fileID: 4300000, guid: 9f95ff6b6b1d940cba7ee401b7aaa904, type: 3}
---- !u!1001 &100100000
-Prefab:
+  m_GameObject: {fileID: 1172647611543218}
+  m_Mesh: {fileID: 4300000, guid: 108e2c315be924ae2b632f743fd916b5, type: 3}
+--- !u!65 &65454415981758400
+BoxCollider:
   m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1172647611543218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications: []
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 104472}
-  m_IsPrefabParent: 1
---- !u!114 &114035936393985166
+  m_Size: {x: 2.5, y: 3.1249123, z: 0.1562162}
+  m_Center: {x: -1.2499995, y: 1.5624561, z: 0.07402976}
+--- !u!114 &114823148700779692
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 104472}
+  m_GameObject: {fileID: 1172647611543218}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 833dbcee19c36496daf447398d21fc3d, type: 3}
@@ -96,4 +108,4 @@ MonoBehaviour:
   snapPosition: 1
   snapPositionValue: 0.5
   snapRotation: 1
-  snapRotateValue: 90
+  snapRotateValue: 45
