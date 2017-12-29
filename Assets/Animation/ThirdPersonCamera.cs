@@ -13,6 +13,8 @@ public class ThirdPersonCamera : MonoBehaviour {
 
 	public bool lockCursor = true;
 
+	public LayerMask CamOcclusion;
+
 	private Vector3 rotationSmoothVelocity;
 	private Vector3 currentRotation;
 
@@ -37,5 +39,20 @@ public class ThirdPersonCamera : MonoBehaviour {
 		transform.eulerAngles = currentRotation;
 
 		transform.position = target.position - transform.forward * distanceFromTarget;
+
+		transform.position = raycast ();
+		//transform.LookAt (target);
+	}
+
+	private Vector3 raycast()
+	{
+		RaycastHit hit = new RaycastHit ();
+
+		if (Physics.Linecast (target.position, transform.position, out hit, CamOcclusion))
+		{
+			return hit.point + hit.normal * 0.1f;
+		}
+
+		return transform.position;
 	}
 }

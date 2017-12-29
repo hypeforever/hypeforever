@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3384446}
   - component: {fileID: 23984916075006672}
   - component: {fileID: 114847065983695866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stone inner corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -360, z: 0}
 --- !u!33 &3384446
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -58,6 +58,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -73,6 +74,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -92,4 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833dbcee19c36496daf447398d21fc3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snapValue: 0.5
+  snapPosition: 1
+  snapPositionValue: 0.5
+  snapRotation: 1
+  snapRotateValue: 90
