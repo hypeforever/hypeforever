@@ -52634,6 +52634,11 @@ Prefab:
       propertyPath: m_Name
       value: Stone inner corner (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 65010260716945392, guid: 1945aee3879ac4534810479e0f21d9b1,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1945aee3879ac4534810479e0f21d9b1, type: 2}
   m_IsPrefabParent: 0
@@ -95071,7 +95076,7 @@ MonoBehaviour:
   pitchBounds: {x: -40, y: 85}
   rotationSmoothTime: 0.05
   sphereCastThickness: 0.2
-  lockCursor: 1
+  cursorLocked: 1
   CamOcclusion:
     serializedVersion: 2
     m_Bits: 256
