@@ -95070,6 +95070,7 @@ MonoBehaviour:
   distanceFromTarget: 2
   pitchBounds: {x: -40, y: 85}
   rotationSmoothTime: 0.05
+  sphereCastThickness: 0.2
   lockCursor: 1
   CamOcclusion:
     serializedVersion: 2
